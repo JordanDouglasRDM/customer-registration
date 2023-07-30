@@ -1,0 +1,132 @@
+body{
+    background-color: #a0aec0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px;
+    min-width: 560px;
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 32px;
+    position: relative;
+}
+
+.title {
+    font-size: 44.8px;
+    color: royalblue;
+    font-weight: 600;
+    letter-spacing: -1.6px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 48px;
+}
+
+.title::before, .title::after {
+    position: absolute;
+    content: "";
+    height: 25.6px;
+    width: 25.6px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: royalblue;
+}
+
+.title::before {
+    width: 28.8px;
+    height: 28.8px;
+    background-color: royalblue;
+}
+
+.title::after {
+    width: 28.8px;
+    height: 28.8px;
+    animation: pulse 1.6s linear infinite;
+}
+
+.message, .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 22.4px;
+}
+
+
+.flex {
+    display: flex;
+    width: 160%;
+    gap: 9.6px;
+}
+
+.form label {
+    position: relative;
+}
+
+.form label .input {
+    width: 94%;
+    font-size: 20px;
+    padding: 16px 16px 32px 16px;
+    outline: 0;
+    border: 1.6px solid rgba(105, 105, 105, 0.397);
+    border-radius: 16px;
+}
+
+.form label .input + span {
+    position: absolute;
+    left: 16px;
+    top: 24px;
+    color: grey;
+    font-size: 1.44em;
+    cursor: text;
+    transition: 0.48s ease;
+}
+
+.form label .input:placeholder-shown + span {
+    top: 18px;
+    font-size: 1em;
+}
+
+.form label .input:focus + span, .form label .input:valid + span {
+    top: 48px;
+    font-size: 0.79em;
+    font-weight: 600;
+}
+
+
+.submit {
+    border: none;
+    outline: none;
+    background-color: royalblue;
+    padding: 16px;
+    border-radius: 16px;
+    color: #fff;
+    font-size: 25.6px;
+    transform: .48s ease;
+}
+
+.submit:hover {
+    background-color: rgb(56, 90, 194);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.44);
+        opacity: 0;
+    }
+}
